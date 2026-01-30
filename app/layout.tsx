@@ -1,8 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter, Montserrat, Fira_Code } from "next/font/google";
-import {Footer} from "@/app/components/layout/footer";
-import {Navbar} from "@/app/components/layout/navbar";
+//import {Footer} from "@/app/components/layout/footer";
+import Navbar from "@/app/components/layout/navbar";
 
 export const metadata: Metadata = {
   title: "Cabrera Milagros - Portfolio",
@@ -31,7 +31,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

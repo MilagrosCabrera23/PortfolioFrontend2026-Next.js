@@ -1,3 +1,9 @@
 export default function Skills() {
-  return ()
+  // Contenido comentado temporalmente para evitar errores
+  // return (
+  //   <section>
+  //     {/* Skills content */}
+  //   </section>
+  // );
+  return null;
 };

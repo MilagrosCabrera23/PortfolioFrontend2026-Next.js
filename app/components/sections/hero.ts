@@ -1,3 +1,9 @@
 export default function Hero() {
-    return ()
+    // Contenido comentado temporalmente para evitar errores
+    // return (
+    //   <section>
+    //     {/* Hero content */}
+    //   </section>
+    // );
+    return null;
 };

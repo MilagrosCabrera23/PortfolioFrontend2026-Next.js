@@ -1,12 +1,133 @@
 @import "tailwindcss";
 
-@theme{
-  --background-color: #0F172A;
-  --color-primary:#1E293B;
-  --color-accent:#38BDF8;
-  --color-text:#F1F5F9;
+@theme {
+    --bg-background: #0F172A;
+    --color-surface: #1E293B;
+    --color-text: #F1F5F9;
+    --color-text-secondary: #94A3B8;
+    --color-primary: #38BDF8;
+    --color-primary-hover: #0EA5E9;
+    --color-accent: #38BDF8;
+    --color-border: #334155;
+    --color-card: #1E293B;
+    --color-card-hover: #334155;
+    --color-gradient-start: #0F172A;
+    --color-gradient-end: #1E293B;
 
-  --font-text-inter:var(--font-inter);
-  --font-title-montserrat:var(--font-montserrat);
-  --font-detalles-fira:var(--font-fira);
+    --font-inter:var(--font-inter);
+    --font-montserrat: var(--font-montserrat);
+    --font-fira-code: var(--font-fira-code);
+}
+html {
+  scroll-behavior: smooth;
+}
+body{
+    background-color: var(--bg-background);
+    color: var(--color-text);
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%);
+}
+
+.glass-effect {
+  backdrop-filter: blur(10px);
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid var(--color-border);
+}
+
+/* ===================================
+   ANIMACIONES
+   =================================== */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(56, 189, 248, 0.6);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Delay classes for staggered animations */
+.animation-delay-100 { animation-delay: 100ms; }
+.animation-delay-200 { animation-delay: 200ms; }
+.animation-delay-300 { animation-delay: 300ms; }
+.animation-delay-400 { animation-delay: 400ms; }
+.animation-delay-500 { animation-delay: 500ms; }
+
+/* ===================================
+   SCROLLBAR PERSONALIZADO
+   =================================== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-secondary);
+}
+
+/* ===================================
+   FOCUS STATES PARA ACCESIBILIDAD
+   =================================== */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ===================================
+   SELECCIÓN DE TEXTO
+   =================================== */
+::selection {
+  background: var(--color-primary);
+  color: var(--color-background);
 }

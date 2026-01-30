@@ -1,8 +1,5 @@
-export interface NavbarLinks{
+export interface NavbarLink{
     label:string;
     href:string;
 }
 
-export interface NavbarData{
-    links:NavbarLinks[];
-}

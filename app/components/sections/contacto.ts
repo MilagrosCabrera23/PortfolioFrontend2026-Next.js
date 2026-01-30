@@ -1,3 +1,9 @@
 export default function Contacto() {
-    return ()
+    // Contenido comentado temporalmente para evitar errores
+    // return (
+    //   <section>
+    //     {/* Contacto content */}
+    //   </section>
+    // );
+    return null;
 };

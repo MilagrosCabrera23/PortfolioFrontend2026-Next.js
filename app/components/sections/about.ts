@@ -1,3 +1,9 @@
 export default function About() {
-    return ()
+    // Contenido comentado temporalmente para evitar errores
+    // return (
+    //   <section>
+    //     {/* About content */}
+    //   </section>
+    // );
+    return null;
 };
