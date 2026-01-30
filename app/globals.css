@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme{
+  --background-color: #0F172A;
+  --color-primary:#1E293B;
+  --color-accent:#38BDF8;
+  --color-text:#F1F5F9;
+
+  --font-text-inter:var(--font-inter);
+  --font-title-montserrat:var(--font-montserrat);
+  --font-detalles-fira:var(--font-fira);
+}
