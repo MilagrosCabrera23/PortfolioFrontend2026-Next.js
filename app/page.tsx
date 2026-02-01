@@ -1,4 +1,4 @@
-//import {Hero} from "@/app/components/sections/hero";
+import Hero from "@/app/components/sections/hero";
 //import {About} from "@/app/components/sections/about";
 //import {Skills} from "@/app/components/sections/skills";
 //import {Projects} from "@/app/components/sections/projects";
@@ -6,9 +6,9 @@
 
 export default function Home() {
   return (
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 ">
-       {/* <Hero />
-        <About />
+      <main className="flex min-h-screen w-full x-auto justify-center items-center relative overflow-hidden">
+        <Hero />
+        {/* <About />
         <Skills />
         <Projects />
         {/*<Contact />*/}

@@ -25,7 +25,7 @@ export default function Navbar() {
         fixed top-0 left-0 right-0 z-50
         transition-all duration-300
         ${isScrolled
-                    ? 'bg-[(--bg-background/95)] backdrop-blur-md shadow-lg border-b border-[(--color-border)]'
+                    ? 'bg-background/95 shadow-lg'
                     : 'bg-transparent'
                 }
       `}
@@ -40,7 +40,7 @@ export default function Navbar() {
                         < span className="hidden sm:inline" > Milagros.dev </span>
                     </Link>
 
-                    <div className="hidden md:flex items-center space-x-1" >
+                    <div className="hidden md:flex items-center space-x-1 " >
                         {
                             navItems.map((item) => (
                                 <NavLink key={item.href} href={item.href} >

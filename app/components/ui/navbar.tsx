@@ -17,8 +17,8 @@ export default function NavLink({ href, children, className = '', onClick }: Nav
       href={href}
       onClick={onClick}
       className={`
-        relative px-3 py-2 text-sm font-medium tracking-wide
-        transition-colors duration-200 
+        relative px-3 py-2  font-medium tracking-wide
+        transition-colors duration-200
         ${isActive
         ? 'text-color-primary' 
           : 'text-color-secondary hover:text-color-text'
