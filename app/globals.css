@@ -131,3 +131,5 @@ body{
   background: var(--color-primary);
   color: var(--color-background);
 }
+
+.group:hover .image { transform: scale(1.05); }

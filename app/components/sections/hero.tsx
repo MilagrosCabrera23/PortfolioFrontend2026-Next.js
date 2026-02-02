@@ -6,7 +6,7 @@ import { heroData } from '@/data/hero';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen w-full flex items-center justify-center pt-16 overflow-hidden">
+    <section id="home"className="relative min-h-screen w-full flex items-center justify-center pt-16 overflow-hidden">
 
       <div className="absolute inset-0 bg-linear-to-b from-background via-background to-surface/20" />
 
