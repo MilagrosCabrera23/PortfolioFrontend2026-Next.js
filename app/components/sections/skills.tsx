@@ -1,9 +1,3 @@
-export default function Skills() {
-  // Contenido comentado temporalmente para evitar errores
-  // return (
-  //   <section>
-  //     {/* Skills content */}
-  //   </section>
-  // );
-  return null;
-};
+import { PhilosophyPoint, SkillCategory } from "@/types/skills";
+import { FaArrowRight, FaCode, FaLaptopCode } from 'react-icons/fa';
+import { skills, philosophyPoints } from "@/data/skills";

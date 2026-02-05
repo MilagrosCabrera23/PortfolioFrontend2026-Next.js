@@ -8,8 +8,8 @@ export const heroData: HeroData = {
     availability: "Disponible para nuevos proyectos",
     ctas: {
         primary: {
-            label: "Ver Proyectos",
-            href: "#projects",      
+            label: "Ver Perfil",
+            href: "#perfil",      
         },
         secondary: {
             label: "Contacto",

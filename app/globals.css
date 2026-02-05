@@ -1,31 +1,45 @@
 @import "tailwindcss";
 
 :root {
-    --bg-background: #0F172A;
-    --color-surface: #1E293B;
-    --color-text: #F1F5F9;
-    --color-text-secondary: #94A3B8;
-    --color-primary: #38BDF8;
-    --color-primary-hover: #0EA5E9;
-    --color-accent: #38BDF8;
-    --color-border: #334155;
-    --color-card: #1E293B;
-    --color-card-hover: #334155;
-    --color-gradient-start: #0F172A;
-    --color-gradient-end: #1E293B;
+  --bg-background: #0F172A;
+  --color-surface: #1E293B;
+  --color-text: #F1F5F9;
+  --color-text-secondary: #94A3B8;
+  --color-primary: #38BDF8;
+  --color-primary-hover: #0EA5E9;
+  --color-accent: #38BDF8;
+  --color-border: #334155;
+  --color-card: #1E293B;
+  --color-card-hover: #334155;
+  --color-gradient-start: #0F172A;
+  --color-gradient-end: #1E293B;
 
-    --font-inter:var(--font-inter);
-    --font-montserrat: var(--font-montserrat);
-    --font-fira-code: var(--font-fira-code);
+  --font-inter: var(--font-inter);
+  --font-montserrat: var(--font-montserrat);
+  --font-fira-code: var(--font-fira-code);
 }
+
 html {
   scroll-behavior: smooth;
 }
-body{
-    background-color: var(--bg-background);
-    color: var(--color-text);
-    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+
+body {
+  background-color: var(--bg-background);
+  color: var(--color-text);
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@layer components {
+
+  .bento-card {
+    @apply relative overflow-hidden rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)]/40 backdrop-blur-md transition-all duration-300 hover:border-[var(--color-primary)]/50 hover:shadow-lg hover:shadow-[var(--color-primary)]/10;
+  }
+
+  /* Un efecto de ruido sutil para que parezca más premium (Opcional) */
+  .noise-bg {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  }
 }
 
 .gradient-text {
@@ -53,6 +67,7 @@ body{
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -63,15 +78,19 @@ body{
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
   }
+
   50% {
     box-shadow: 0 0 40px rgba(56, 189, 248, 0.6);
   }
@@ -90,11 +109,25 @@ body{
 }
 
 /* Delay classes for staggered animations */
-.animation-delay-100 { animation-delay: 100ms; }
-.animation-delay-200 { animation-delay: 200ms; }
-.animation-delay-300 { animation-delay: 300ms; }
-.animation-delay-400 { animation-delay: 400ms; }
-.animation-delay-500 { animation-delay: 500ms; }
+.animation-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animation-delay-500 {
+  animation-delay: 500ms;
+}
 
 /* ===================================
    SCROLLBAR PERSONALIZADO
@@ -132,4 +165,6 @@ body{
   color: var(--color-background);
 }
 
-.group:hover .image { transform: scale(1.05); }
+.group:hover .image {
+  transform: scale(1.05);
+}
