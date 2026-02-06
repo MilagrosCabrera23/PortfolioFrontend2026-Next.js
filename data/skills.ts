@@ -11,19 +11,11 @@ export const skillsHero: SkillHero = {
     description: "Mi caja de herramientas para transformar ideas en productos digitales reales."
 };
 
+export const philosophHero: SkillHero = {
+    title: "Filosofía de Desarrollo",
+    description: "Principios que guían mi enfoque para crear software de alta calidad."
+};
 export const skills: SkillCategory[] = [
-    {
-        category: "Frontend",
-        skills: [
-            { name: "React", icon: SiReact, label: "React" },
-            { name: "Next.js", icon: SiNextdotjs, label: "Next.js" },
-            { name: "Tailwind CSS", icon: SiTailwindcss, label: "Tailwind CSS" },
-            { name: "TypeScript", icon: SiTypescript, label: "TypeScript" },
-            { name: "JavaScript", icon: SiJavascript, label: "JavaScript" },
-            { name: "HTML5", icon: SiHtml5, label: "HTML5" },
-            { name: "CSS3", icon: SiCss3, label: "CSS3" },
-        ],
-    },
     {
         category: "Backend",
         skills: [
@@ -33,6 +25,18 @@ export const skills: SkillCategory[] = [
             { name: "PostgreSQL", icon: SiPostgresql, label: "PostgreSQL" },
             { name: "MySQL", icon: SiMysql, label: "MySQL" },
             { name: "Supabase", icon: SiSupabase, label: "Supabase" },
+        ],
+    },
+     {
+        category: "Frontend",
+        skills: [
+            { name: "React", icon: SiReact, label: "React" },
+            { name: "Next.js", icon: SiNextdotjs, label: "Next.js" },
+            { name: "Tailwind CSS", icon: SiTailwindcss, label: "Tailwind CSS" },
+            { name: "TypeScript", icon: SiTypescript, label: "TypeScript" },
+            { name: "JavaScript", icon: SiJavascript, label: "JavaScript" },
+            { name: "HTML5", icon: SiHtml5, label: "HTML5" },
+            { name: "CSS3", icon: SiCss3, label: "CSS3" },
         ],
     },
     {
@@ -69,7 +73,7 @@ export const philosophyPoints: PhilosophyPoint[] = [
     },
     {
         title: "Accessibility First",
-        description: "Diseño para todos. La accesibilidad no es una opción, es una responsabilidad.",
+        description: "Diseño para todos. Creo interfaces que cualquier persona puede usar, sin importar sus capacidades físicas.",
         icon: FaUniversalAccess,
         color: "#9013FE",
     }

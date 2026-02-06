@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { AboutInfo } from "@/types/about";
 import SocialLinkBtn from "@/app/components/ui/socialLinkBtn";
 import { aboutData } from "@/data/about";
 import { FaMapMarkerAlt } from "react-icons/fa";
