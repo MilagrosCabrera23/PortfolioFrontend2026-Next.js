@@ -25,7 +25,7 @@ export default function About() {
                 <p key={index}>{paragraph}</p>
               ))}
             </div>
-          
+
             <div className="flex items-center justify-evenly">
               <div className="flex items-center space-x-2">
                 <FaMapMarkerAlt className="text-(--color-primary)" />
@@ -43,12 +43,10 @@ export default function About() {
                 ))}
               </div>
             </div>
-        
-          </div>
+
           </div>
         </div>
-    
-
+      </div>
     </section>
   );
 }

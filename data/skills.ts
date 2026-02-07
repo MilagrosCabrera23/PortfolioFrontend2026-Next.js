@@ -61,19 +61,19 @@ export const philosophyPoints: PhilosophyPoint[] = [
     },
     {
         title: "Responsive Design",
-        description: "No solo construyo funcionalidades, diseño experiencias. El usuario final es la prioridad.",
+        description: "No solo construyo funcionalidades, diseño experiencias. El usuario final es mi prioridad.",
         icon: FaMobileAlt,
         color: "#50E3C2",
     },
     {
-        title: "Performance Optimization",
+        title: "Performance",
         description: "Aplicaciones rápidas y eficientes son mi objetivo. La optimización es parte integral del desarrollo.",
         icon: FaRocket,
         color: "#F5A623",
     },
     {
         title: "Accessibility First",
-        description: "Diseño para todos. Creo interfaces que cualquier persona puede usar, sin importar sus capacidades físicas.",
+        description: "Diseño para todos. Creo interfaces que cualquier persona puede usarla sin importar que.",
         icon: FaUniversalAccess,
         color: "#9013FE",
     }

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import NavLink from '@/app/components/ui/navbar';
 import { navItems } from '@/data/navbar';
-import Button from '@/app/components/ui/Button';
+import  Button from '@/app/components/ui/Button';
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -24,15 +24,12 @@ export default function Navbar() {
             className={`
         fixed top-0 left-0 right-0 z-50
         transition-all duration-300
-        ${isScrolled
-                    ? 'bg-background/95 shadow-lg'
-                    : 'bg-transparent'
-                }
+        bg-transparent  
       `}
         >
             <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" >
                 <div className="flex items-center justify-between h-16 md:h-20" >
-                    < Link
+                    <Link
                         href="/"
                         className="flex items-center space-x-2 text-[(--color-text)] font-bold text-xl hover:text-[(--color-primary)] transition-colors"
                     >
@@ -52,7 +49,7 @@ export default function Navbar() {
 
 
                     <div className="hidden md:flex items-center space-x-4" >
-                        < Button variant="primary" size="md"
+                        <Button variant="secondary" size="sm"
                             onClick={() => window.open('/cv.pdf', '_blank')}
                         >
                             Descargar CV
@@ -79,7 +76,7 @@ export default function Navbar() {
                     </button>
                 </div>
 
-                {/* --- MENÚ DESPLEGABLE (Móvil) --- */}
+                {/* --- MENÚ DESPLEGABLE --- */}
                 <div
                     className={
                         `
@@ -93,15 +90,15 @@ export default function Navbar() {
                                 <NavLink
                                     key={item.href}
                                     href={item.href}
-                                    onClick={() => setIsMobileMenuOpen(false)} // Cierra el menú al tocar
+                                    onClick={() => setIsMobileMenuOpen(false)} 
                                     className="block w-full"
                                 >
                                     {item.label}
                                 </NavLink>
                             ))}
                         <div className="pt-4 flex flex-col space-y-3" >
-                            <Button
-                                variant="primary"
+                            <Button 
+                                variant="secondary"
                                 size="sm" 
                                 onClick={() => window.open('/cv.pdf', '_blank')}
                             >

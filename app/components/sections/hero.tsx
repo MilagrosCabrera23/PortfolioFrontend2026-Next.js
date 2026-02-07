@@ -6,7 +6,7 @@ import { heroData } from '@/data/hero';
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen w-full flex items-center justify-center pt-16 overflow-hidden">
+    <section id="/" className="relative min-h-screen w-full flex items-center justify-center pt-16 overflow-hidden">
 
       <div className="absolute inset-0 bg(--bg-background)] " />
 
@@ -21,10 +21,9 @@ export default function Hero() {
         />
       </div>
 
-      {/* --- CONTENIDO --- */}
       <div className="relative z-10 max-w-5xl w-full mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
 
-        {/* 1. Badge de Disponibilidad */}
+
         <div className="animate-fade-in-up">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-(--color-surface) border border-[var(--color-border) text-(--color-text) text-base shadow-sm backdrop-blur-sm">
             <span className="relative flex h-2 w-2">
@@ -35,32 +34,27 @@ export default function Hero() {
           </span>
         </div>
 
-        {/* 2. Título Principal */}
         <h1 className="space-y-4 animate-fade-in-up animation-delay-100">
           <span className="block text-3xl sm:text-4xl md:text-5xl font-bold text-[(--color-text)] tracking-tighter">
             {heroData.intro}
           </span>
           <span className="block text-5xl sm:text-6xl md:text-8xl font-extrabold tracking-tighter">
-            {/* Gradiente en el texto */}
             <span className="gradient-text drop-shadow-lg  ">
               {heroData.name}
             </span>
           </span>
         </h1>
 
-        {/* 3. Subtítulo (Rol) */}
         <div className="animate-fade-in-up animation-delay-200">
           <p className="text-2xl sm:text-3xl md:text-3xl font-semibold text-(--color-text-secondary)">
             {heroData.role}
           </p>
         </div>
 
-        {/* 4. Descripción */}
         <p className="animate-fade-in-up animation-delay-300 text-lg font-medium text-white sm:text-2xl mx-auto leading-relaxed  drop-shadow-[0_0_10px_rgba(56,189,248,0.6)] tracking-wider" >
           {heroData.description}
         </p>
 
-        {/* 5. Botones (CTAs) */}
         <div className="animate-fade-in-up animation-delay-400 flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
           <Link href={heroData.ctas.primary.href}>
             <Button

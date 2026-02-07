@@ -16,7 +16,7 @@ export default function SectionHeader({
   subtitle,
   description,
   align = 'center',
-  variant = 'minimal',  // 👈 Por defecto usa minimalista
+  variant = 'minimal',  
   className = '',
   titleClassName = '',
   subtitleClassName = '',
@@ -28,7 +28,6 @@ export default function SectionHeader({
     right: 'text-right ml-auto',
   };
 
-  // 🎨 ESTILOS PREDEFINIDOS (3 opciones que te mostré)
   const styles = {
     minimal: {
       subtitle: 'text-lg sm:text-2xl md:text-3xl font-semibold text-(--color-text-secondary) tracking-wide',
@@ -47,7 +46,6 @@ export default function SectionHeader({
     },
   };
 
-  // Combina: estilo predefinido + override personalizado
   const currentStyle = styles[variant];
 
   return (

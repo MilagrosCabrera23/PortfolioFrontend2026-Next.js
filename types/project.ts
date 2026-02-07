@@ -1,8 +1,13 @@
-export interface Project {
+export interface ProjectsData {
     id:number;
-    name:string;
+    title:string;
     description:string;
-    imageUrl:string;
     projectUrl:string;
-    techStack:string[];
+   tags:string[];
+   
+}
+
+export interface ProjectsHero {
+    title: string;
+    description: string;
 }
