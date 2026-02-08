@@ -10,7 +10,7 @@ import {
 
 export default function Skills() {
     return (
-        <section id="skills" className="py-24 bg-(--bg-background) overflow-hidden">
+        <section id="skills" className="py-10 overflow-hidden">
             <div className="skills-hero">
                 <h2 className="text-(--color-primary) text-4xl md:text-5xl sm:text-3xl font-bold text-center">{skillsHero.title}</h2>
                 <p className="text-center text-(--color-text-secondary) text-lg mx-auto mb-3">

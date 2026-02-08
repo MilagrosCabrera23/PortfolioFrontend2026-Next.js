@@ -1,5 +1,5 @@
 'use client';
-
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import NavLink from '@/app/components/ui/navbar';
@@ -20,21 +20,20 @@ export default function Navbar() {
     }, []);
 
     return (
-        <header
-            className={`
-        fixed top-0 left-0 right-0 z-50
-        transition-all duration-300
-        bg-transparent  
-      `}
-        >
+                <header
+                        className={`
+    
+                transition-all duration-300
+                '
+            `}
+                >
             <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" >
-                <div className="flex items-center justify-between h-16 md:h-20" >
+                <div className="flex items-center justify-between h-22 md:h-24" >
                     <Link
                         href="/"
-                        className="flex items-center space-x-2 text-[(--color-text)] font-bold text-xl hover:text-[(--color-primary)] transition-colors"
+                        className="flex items-center  space-x-2 text-[(--color-text)] font-bold text-xl hover:text-[(--color-primary)] transition-colors py-2"
                     >
-                        <span className="text-2xl" > {'</>'} </span>
-                        < span className="hidden sm:inline" > Milagros.dev </span>
+                    <Image src="/logo.png" alt="Logo" className="h-full w-auto object-contain" width={128} height={123} />
                     </Link>
 
                     <div className="hidden md:flex items-center space-x-1 " >

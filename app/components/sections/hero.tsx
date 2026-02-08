@@ -6,29 +6,16 @@ import { heroData } from '@/data/hero';
 
 export default function Hero() {
   return (
-    <section id="/" className="relative min-h-screen w-full flex items-center justify-center pt-16 overflow-hidden">
+    <section id="/" className="max-w-7xl w-full flex items-center justify-center  overflow-hidden">
 
-      <div className="absolute inset-0 bg(--bg-background)] " />
-
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div
-          className="absolute top-0 w-full h-125 rounded-full opacity-20 blur-[100px]"
-
-        />
-        <div
-          className="absolute -bottom-[20%] -left-[10%] w-full h-125 rounded-full opacity-15 blur-[120px]"
-
-        />
-      </div>
-
-      <div className="relative z-10 max-w-5xl w-full mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+      <div className=" w-full mx-auto  sm:px-6 lg:px-8 text-center space-y-7">
 
 
         <div className="animate-fade-in-up">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-(--color-surface) border border-[var(--color-border) text-(--color-text) text-base shadow-sm backdrop-blur-sm">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-(--color-accent) opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-(--color-accent)"></span>
+            <span className="flex h-2 w-2">
+              <span className="animate-ping inline-flex h-full w-full rounded-full bg-(--color-accent) opacity-75"></span>
+              <span className="inline-flex rounded-full h-2 w-2 bg-(--color-accent)"></span>
             </span>
             {heroData.availability}
           </span>

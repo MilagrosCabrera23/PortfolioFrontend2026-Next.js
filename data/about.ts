@@ -1,5 +1,5 @@
 import { AboutInfo } from "@/types/about";
-import { FaLinkedin, FaEnvelope, FaGithub, FaGlobe} from "react-icons/fa6"
+import { FaLinkedin, FaEnvelope, FaGithub} from "react-icons/fa6"
 
 export const aboutData: AboutInfo = {
     title: "Sobre Mi",
