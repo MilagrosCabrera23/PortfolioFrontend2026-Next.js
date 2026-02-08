@@ -10,17 +10,17 @@ import {
 
 export default function Skills() {
     return (
-        <section id="skills" className="py-10 overflow-hidden">
-            <div className="skills-hero">
+        <section id="skills" className="py-10 overflow-hidden max-w-7xl mx-auto">
+            <div className="skills-hero sm:px-4 md:px-6 lg:px-10">
                 <h2 className="text-(--color-primary) text-4xl md:text-5xl sm:text-3xl font-bold text-center">{skillsHero.title}</h2>
                 <p className="text-center text-(--color-text-secondary) text-lg mx-auto mb-3">
                     {skillsHero.description}
                 </p>
             </div>
 
-            <div className="flex items-center justify-center gap-4 mx-auto text-balance px-10">
+            <div className="flex items-center justify-center gap-4 mx-auto text-balance px-10 sm:px-4 md:px-6 md:flex flex-col">
                 {skills.map((skillCategory, index) => (
-                    <Card key={index}  className="bg-(--color-surface) text-white border-(--color-border) hover:border-(--color-primary) transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group text-center mx-auto p-6">
+                    <Card key={index}  className="bg-(--color-surface) text-white border-(--color-border) hover:border-(--color-primary) transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group text-center">
                         <CardHeader>
                             <CardTitle className="text-xl font-bold text-center text-(--color-primary) group-hover:bg-linear-to-r group-hover:from-blue-400 group-hover:to-purple-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">{skillCategory.category}</CardTitle>
                         </CardHeader>
@@ -41,7 +41,7 @@ export default function Skills() {
 
             <div id="philosophy">
 
-                <div className="philosophy-hero mt-10">
+                <div className="philosophy-hero mt-10 sm:px-4 md:px-6">
                     <h2 className="text-white text-3xl md:text-4xl sm:text-2xl font-bold text-center">{philosophHero.title}</h2>
                     <p className="text-center text-(--color-text-secondary) text-lg mx-auto mb-5">
                         {philosophHero.description}
@@ -49,7 +49,7 @@ export default function Skills() {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-10">
+            <div className="grid grid-cols-2  lg:grid-cols-4 gap-4 px-10">
                 {philosophyPoints.map((item, index) => (
                     <Card
                         key={index}

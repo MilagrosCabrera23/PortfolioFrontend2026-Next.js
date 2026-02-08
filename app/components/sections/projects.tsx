@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 export default function Projects() {
     return (
-        <section id="projects" className="py-10 ">
+        <section id="projects" className="py-10 max-w-7xl mx-auto">
             <div className="mx-auto px-4 sm:px-6 lg:px-8 relative">
 
                 <div className="projects-hero">

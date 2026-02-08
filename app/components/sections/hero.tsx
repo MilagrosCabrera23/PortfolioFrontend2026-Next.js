@@ -6,7 +6,7 @@ import { heroData } from '@/data/hero';
 
 export default function Hero() {
   return (
-    <section id="/" className="max-w-7xl w-full flex items-center justify-center  overflow-hidden">
+    <section id="/" className="max-w-7xl w-full flex items-center justify-center py-10 overflow-hidden">
 
       <div className=" w-full mx-auto  sm:px-6 lg:px-8 text-center space-y-7">
 

@@ -8,7 +8,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-(--bg-background)overflow-hidden">
+    <section id="about" className="py-10 max-w-7xl bg-(--bg-background)overflow-hidden">
       <div className="max-7-xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
@@ -20,7 +20,7 @@ export default function About() {
             <h2 className="text-4xl md:text-5xl sm:text-3xl font-bold text-center">{aboutData.title}</h2>
             <h3 className="text-center font-bold text-(--color-primary) ">{aboutData.subtitle}</h3>
 
-            <div className="space-y-3 text-(--color-text-secondary) leading-relaxed text-lg tracking-tighter">
+            <div className="space-y-3 text-(--color-text-secondary) leading-relaxed text-lg tracking-tighter text-balance md:text-center sm:text-center">
               {aboutData.description.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}

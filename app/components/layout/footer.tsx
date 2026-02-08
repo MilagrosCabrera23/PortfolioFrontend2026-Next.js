@@ -5,11 +5,13 @@ import { footerData } from "@/data/footer";
 
 export default function Footer() {
     return (
-        <footer className="max-w-7xl flex flex-col justify-center mx-auto lg:px-8 ">
-            <div className="h-20 md:h-24 flex  items-center justify-between px-4 gap-6 md:flex-row">
+        <footer className="max-w-7xl flex flex-col justify-center mx-auto lg:px-8">
+            <div className="flex flex-col items-center justify-center px-4 gap-4 md:gap-6 md:flex-row md:items-center md:justify-between py-4">
                      <Image src={footerData.image} alt="Logo" className="h-full w-auto object-contain" width={125} height={122} />
                 <div>
-                    <p className="text-(--color-text-secondary) text-lg text-center  tracking-wide">{footerData.description}</p>
+                    <p className="text-(--color-text-secondary) text-balance text-lg text-center tracking-wide sm:text-sm">
+                        {footerData.description}
+                    </p>
                 </div>
                 <div className="space-x-2 flex items-center justify-center">
                     {footerData.socialLinksFooter.map((link) => (
