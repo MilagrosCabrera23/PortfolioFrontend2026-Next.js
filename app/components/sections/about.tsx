@@ -20,13 +20,13 @@ export default function About() {
             <h2 className="text-4xl md:text-5xl sm:text-3xl font-bold text-center">{aboutData.title}</h2>
             <h3 className="text-center font-bold text-(--color-primary) ">{aboutData.subtitle}</h3>
 
-            <div className="space-y-3 text-(--color-text-secondary) leading-relaxed text-lg tracking-tighter text-balance md:text-center sm:text-center">
+            <div className="space-y-3 text-(--color-text-secondary) leading-relaxed text-lg tracking-tighter text-balance md:text-center sm:text-center xs:text-center">
               {aboutData.description.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
             </div>
 
-            <div className="flex items-center justify-evenly">
+            <div className="flex items-center justify-evenly xs:flex-col xs:space-y-4">
               <div className="flex items-center space-x-2">
                 <FaMapMarkerAlt className="text-(--color-primary)" />
                 <span>{aboutData.location}</span>

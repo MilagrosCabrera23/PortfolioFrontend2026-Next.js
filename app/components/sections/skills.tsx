@@ -18,7 +18,7 @@ export default function Skills() {
                 </p>
             </div>
 
-            <div className="flex items-center justify-center gap-4 mx-auto text-balance px-10 sm:px-4 md:px-6 md:flex flex-col">
+            <div className="flex-row  items-center justify-center gap-4 mx-auto text-balance px-10 sm:px-4 md:px-6 md:flex">
                 {skills.map((skillCategory, index) => (
                     <Card key={index}  className="bg-(--color-surface) text-white border-(--color-border) hover:border-(--color-primary) transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group text-center">
                         <CardHeader>
@@ -49,7 +49,7 @@ export default function Skills() {
                 </div>
             </div>
 
-            <div className="grid grid-cols-2  lg:grid-cols-4 gap-4 px-10">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 xs:grid-cols-1 px-10">
                 {philosophyPoints.map((item, index) => (
                     <Card
                         key={index}

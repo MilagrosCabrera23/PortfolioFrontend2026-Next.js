@@ -57,7 +57,9 @@
 html {
   scroll-behavior: smooth;
 }
-
+@theme inline{
+   --breakpoint-xs:220px;
+}
 body {
   background-color: var(--bg-background);
   color: var(--color-text);
