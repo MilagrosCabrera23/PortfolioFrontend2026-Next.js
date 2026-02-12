@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Profesional — Milagros Cabrera
 
-## Getting Started
+Portfolio personal desarrollado con enfoque en Frontend moderno, diseño UI de alta calidad y buenas prácticas de ingeniería. Soy Técnica Superior en Desarrollo de Software y este proyecto refleja mi criterio técnico en arquitectura de componentes, validaciones robustas y experiencia de usuario cuidada.
 
-First, run the development server:
+## Tech Stack
+- **Next.js (App Router)**: SSR/SSG y routing moderno para rendimiento y escalabilidad.
+- **TypeScript**: tipado estático para mayor mantenibilidad y menor tasa de errores.
+- **Tailwind CSS**: estilo consistente y veloz con utilidades reutilizables.
+- **Shadcn/UI**: componentes accesibles y extensibles con diseño sólido.
+- **React Hook Form**: formularios performantes con mínima re-renderización.
+- **Zod**: validación robusta y segura con esquemas tipados.
+- **EmailJS**: envío de correos sin backend dedicado.
+- **SweetAlert2**: feedback visual claro en estados de éxito/error.
 
+## Características Destacadas
+- **Formulario de contacto avanzado**: validación estricta con React Hook Form + Zod antes del envío.
+- **Integración con EmailJS**: envío directo de mensajes sin infraestructura adicional.
+- **UX refinada**: `spellCheck` desactivado y `autoComplete` controlado para mantener estética oscura limpia y coherente.
+- **Arquitectura limpia**: el formulario está encapsulado en el componente `FormContact.tsx`, facilitando mantenimiento y escalabilidad.
+- **Secciones principales**: Hero, About, Skills, Projects y Contacto, organizadas en componentes reutilizables.
+- **Diseño responsivo**: optimizado para desktop y mobile con layout flexible.
+- **Estética moderna**: efectos de glassmorphism, degradados personalizados y microinteracciones.
+
+## Instalación
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Clonar y ejecutar el proyecto (paso a paso)
+```bash
+# 1) Clonar el repositorio
+git clone https://github.com/tu-usuario/tu-repo.git
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# 2) Entrar al proyecto
+cd tu-repo
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# 3) Instalar dependencias
+npm install
 
-## Learn More
+# 4) Ejecutar en desarrollo
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Estructura de carpetas
+```
+app/
+	components/
+		layout/
+			footer.tsx
+			navbar.tsx
+		sections/
+			about.tsx
+			contacto.tsx
+			hero.tsx
+			projects.tsx
+			skills.tsx
+		ui/
+			Button.tsx
+			card.tsx
+			cardProject.tsx
+			form.tsx
+			formContact.tsx
+			header.tsx
+			input.tsx
+			label.tsx
+			navbar.tsx
+			socialLinkBtn.tsx
+			textarea.tsx
+	globals.css
+	layout.tsx
+	page.tsx
+data/
+	about.ts
+	contacto.ts
+	footer.tsx
+	hero.ts
+	navbar.ts
+	projects.ts
+	skills.ts
+lib/
+	utils.ts
+public/
+	cv.pdf
+	logo.png
+	profile.png
+types/
+	about.ts
+	contacto.ts
+	footer.ts
+	hero.ts
+	navbar.ts
+	project.ts
+	skills.ts
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Autor
+**Milagros Cabrera**
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
