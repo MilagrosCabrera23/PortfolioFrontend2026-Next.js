@@ -1,7 +1,6 @@
 import { projectsHero, projectsData } from "@/data/projects";
-import Button from "@/app/components/ui/Button";
 import ProjectCard from "@/app/components/ui/cardProject";
-import { FaArrowRight } from "react-icons/fa";
+
 
 export default function Projects() {
     return (
