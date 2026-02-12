@@ -5,21 +5,56 @@ import { ContactoCardFormData, ContactoCardSchema } from "@/types/contacto"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/app/components/ui/form"
 import { Input } from "@/app/components/ui/input"
 import { Textarea } from "@/app/components/ui/textarea"
+import emailjs from "@emailjs/browser"
+import Swal from 'sweetalert2';
 import Button from "@/app/components/ui/Button"
 
 
 export default function FormContact() {
     const form = useForm<ContactoCardFormData>({
         resolver: zodResolver(ContactoCardSchema),
+        mode: "onChange",
         defaultValues: {
             name: "", email: "", reason: "", message: ""
         },
     })
 
     const { isSubmitting } = form.formState;
+  
     const onSubmit = async (data: ContactoCardFormData) => {
-        await new Promise((resolve) => setTimeout(resolve, 2000));
-        console.log("Datos validados:", data);
+       try{
+        await emailjs.send(
+            process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+            process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+            {
+                name: data.name,
+                email: data.email,
+                reason: data.reason,
+                message: data.message
+            },
+            process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+        );
+        Swal.fire({
+            title: '¡Mensaje enviado!',
+            text: 'Gracias por contactarme, te responderé lo antes posible.',
+            icon: 'success',
+            confirmButtonColor: '#3b82f6', 
+            background: '#1a1a1a', 
+            color: '#ffffff'
+        });
+        form.reset();
+       }
+       catch(error){
+        Swal.fire({
+            title: 'Error al enviar el mensaje',
+            text: 'Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.',
+            icon: 'error',
+            confirmButtonColor: '#ef4444', 
+            background: '#1a1a1a', 
+            color: '#ffffff'
+        });
+        form.reset();
+       }
     }
 
     return (
@@ -31,7 +66,7 @@ export default function FormContact() {
                     <FormItem className="flex flex-col items-center">
                         <FormLabel className="text-sm font-bold tracking-widest bg-linear-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text ">Nombre</FormLabel>
                         <FormControl>
-                            <Input placeholder="Ingresa tu nombre" {...field} className="bg-white/3 text-white/20 placeholder:text-gray-300 rounded-xl px-4 transition-all duration-300 outline-none w-full max-w-md uppercase text-center" />
+                            <Input placeholder="Ingresa tu nombre" {...field} className="bg-white/3 text-white placeholder:text-gray-500 rounded-xl p-6 transition-all duration-300 outline-none w-full max-w-md" autoComplete="off" spellCheck="false"/>
                         </FormControl>
                         <FormMessage />
                     </FormItem>
@@ -42,7 +77,7 @@ export default function FormContact() {
                     <FormItem className="flex flex-col items-center">
                         <FormLabel className="text-sm font-bold tracking-widest bg-linear-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">Email</FormLabel>
                         <FormControl>
-                            <Input placeholder="Ingresa tu email" {...field} className="bg-white/3 text-white/20 placeholder:text-gray-300 rounded-xl px-4 transition-all duration-300 outline-none w-full max-w-md uppercase text-center"/>
+                            <Input placeholder="Ingresa tu email" {...field} className="bg-white/3 text-white placeholder:text-gray-500 rounded-xl p-6 transition-all duration-300 outline-none w-full max-w-md" autoComplete="off" spellCheck="false"/>
                         </FormControl>
                         <FormMessage />     
                     </FormItem>
@@ -53,8 +88,9 @@ export default function FormContact() {
                     <FormItem className="flex flex-col items-center">
                         <FormLabel className="text-sm font-bold tracking-widest bg-linear-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Motivo</FormLabel>
                         <FormControl>
-                            <Input placeholder="Ingresa el motivo" {...field} className="bg-white/3 text-white/20 placeholder:text-gray-300 rounded-xl px-4 transition-all duration-300 outline-none w-full max-w-md uppercase text-center"/>
+                            <Input placeholder="Ingresa el motivo" {...field} className="bg-white/3 text-white placeholder:text-gray-300 rounded-xl px-4 transition-all duration-300 outline-none w-full max-w-md uppercase text-center" autoComplete="off" spellCheck="false"/>
                         </FormControl>
+                        <FormMessage />
                     </FormItem>
                 )} />
 
@@ -63,8 +99,9 @@ export default function FormContact() {
                     <FormItem className="flex flex-col items-center">
                         <FormLabel className="text-sm font-bold tracking-widest bg-linear-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent px-4">Mensaje</FormLabel>
                         <FormControl>
-                            <Textarea placeholder="Cuéntame más" {...field} className="bg-white/3 text-white/20 placeholder:text-gray-300 rounded-xl px-4 transition-all duration-300 outline-none text-center w-full max-w-md uppercase" />
+                            <Textarea placeholder="Cuéntame más" {...field} className="bg-white/3 text-white placeholder:text-gray-300 rounded-xl px-4 transition-all duration-300 outline-none text-center w-full max-w-md uppercase" autoComplete="off" spellCheck="false"/>
                         </FormControl>
+                        <FormMessage />
                     </FormItem>
                 )} />
 

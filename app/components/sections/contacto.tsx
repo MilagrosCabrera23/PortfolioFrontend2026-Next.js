@@ -11,7 +11,7 @@ export default function Contacto() {
                 <h2 className="text-(--color-primary) text-4xl md:text-5xl font-bold text-center">
                     {hero.title}
                 </h2>
-                <p className="text-center text-(--color-text-secondary) text-lg mx-auto mt-4 max-w-2xl">
+                <p className="text-center text-(--color-text-secondary) text-xl mx-auto mt-4 max-w-2xl">
                     {hero.description}
                 </p>
             </div>
